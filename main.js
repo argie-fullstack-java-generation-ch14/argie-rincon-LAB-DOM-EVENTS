@@ -21,3 +21,20 @@ function changePStyle() {
 }
 
 botonEstilo.addEventListener('click', changePStyle);
+
+// TASK 2
+const form1 = document.getElementById('form1');
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const inputNombre = form1.elements['fname'];
+  const inputApellido = form1.elements['lname'];
+
+  console.log('Nombre:', inputNombre.value);
+  console.log('Apellido:', inputApellido.value);
+
+  inputNombre.value = '';
+  inputApellido.value = '';
+}
+form1.addEventListener('submit', handleFormSubmit);
