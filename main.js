@@ -38,3 +38,25 @@ function handleFormSubmit(event) {
   inputApellido.value = '';
 }
 form1.addEventListener('submit', handleFormSubmit);
+
+
+// TASK 3
+const botonEnlaces = document.getElementById('botonEnlaces');
+
+function showLinksInfo() {
+  const links = document.querySelectorAll('a');
+
+  const totalLinks = links.length;
+
+  const firstLink = links[0].href;
+  const lastLink = links[totalLinks - 1].href;
+
+  alert(
+    `Información de links:\n` +
+    `- Total de links: ${totalLinks}\n` +
+    `- Primer enlace: ${firstLink}\n` +
+    `- Último enlace: ${lastLink}`
+  );
+}
+
+botonEnlaces.addEventListener('click', showLinksInfo);
